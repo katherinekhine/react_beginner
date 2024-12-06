@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 
 
 function Navbar() {
@@ -9,6 +9,9 @@ function Navbar() {
             <Link to="/about" className='hover:text-red-500'>About</Link>
             <Link to="/projects" className='hover:text-red-500'>Projects</Link>
         </ul>
+        <main>
+            <Outlet />
+        </main>
     </>
   )
 }
