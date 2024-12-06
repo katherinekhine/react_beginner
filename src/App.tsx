@@ -1,16 +1,13 @@
-import { Link, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <div>
-      <ul className="flex gap-5 p-4 bg-red-100">
-        <Link to="/" className='hover:text-red-500'>Home</Link>
-        <Link to="/about" className='hover:text-red-500'>About</Link>
-        <Link to="/projects" className='hover:text-red-500'>Projects</Link>
-      </ul>
+      <Navbar />
       <main>
        <Routes>
           <Route path='/' element={<Home />} />
