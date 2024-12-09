@@ -4,11 +4,15 @@ import { useState } from "react"
 function Home() {
   // const name:string = 'Mg Mg'
   // hook #
- const [name, setName] = useState<string>('Mg Mg2')
+ const [name, setName] = useState<string>('Mg Mg')
 
+ const handleClick = () => {
+  setName(name === 'Mg Mg' ? 'Guest' : 'Mg Mg')
+ }
  
   return (
     <div>
+      <button onClick={handleClick}>Change Text</button>
       {/* add banner */}
       {
         name == "Mg Mg"?(
